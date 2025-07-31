@@ -1,14 +1,29 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
-*.py[codz]
+*.py[cod]
 *$py.class
 
 # C extensions
 *.so
 
-
-# IGNORE THE DATASET
+# Dataset files (do not commit to git)
 data/
+*.csv
+!requirements.txt
+
+# Model outputs
+outputs/
+models/
+*.pkl
+*.joblib
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Virtual environments
+venv/
+env/
+.env
 
 
 # Distribution / packaging
