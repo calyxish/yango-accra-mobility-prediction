@@ -31,7 +31,8 @@ def load_data() -> Tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame, pd.DataFrame]
     
     except FileNotFoundError as e:
         print(f"Error loading data: {e}")
-        print("Please ensure all data files are in the data/ directory")
+        print(f"Please ensure all data files are in the data/raw/ directory")
+        print(f"Expected files in: {config.DATA_DIR}")
         raise
 
 def evaluate_model(y_true: np.ndarray, y_pred: np.ndarray, model_name: str = "Model") -> Dict[str, float]:

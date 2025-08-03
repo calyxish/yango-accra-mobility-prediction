@@ -6,7 +6,7 @@ from pathlib import Path
 
 # Project root directory
 PROJECT_ROOT = Path(__file__).parent
-DATA_DIR = PROJECT_ROOT / "data"
+DATA_DIR = PROJECT_ROOT / "data" / "raw"
 OUTPUTS_DIR = PROJECT_ROOT / "outputs"
 NOTEBOOKS_DIR = PROJECT_ROOT / "notebooks"
 
@@ -22,6 +22,7 @@ RANDOM_SEED = 42
 TARGET_COLUMN = "Target"
 
 # Create directories if they don't exist
+DATA_DIR.mkdir(parents=True, exist_ok=True)
 OUTPUTS_DIR.mkdir(exist_ok=True)
 
 def get_data_path(filename):
